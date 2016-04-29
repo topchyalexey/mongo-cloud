@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ru.mtsbank.service</groupId>
+	<version>0.1-SNAPSHOT</version>
+	<artifactId>download-maven-deps</artifactId>
+	<packaging>jar</packaging>
+
+	<repositories>
+
+	  <repository>
+		<id>1</id>
+		<url>http://central.maven.org/maven2</url>
+	  </repository>
+	  <repository>
+		<id>2</id>
+		<url>http://plugins.gradle.org/m2/</url>
+	  </repository>	  
+	  
+  </repositories>
+
+  <dependencies>
+    <dependency>
+        <groupId>org.mongodb</groupId>
+        <artifactId>mongo-java-driver</artifactId>
+        <version>2.10.1</version>
+    </dependency>
+<dependency>
+    <groupId>org.mongojack</groupId>
+    <artifactId>mongojack</artifactId>
+    <version>2.6.0</version>
+</dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.7.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>2.7.1</version>
+    </dependency>    
+<dependency>
+	<groupId>org.jongo</groupId>
+	<artifactId>jongo</artifactId>
+	<version>1.2</version>
+</dependency>
+
+	</dependencies>
+		
+</project>		
+		

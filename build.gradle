@@ -1,0 +1,41 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart',
+                   'Implementation-Version': version
+    }
+}
+
+repositories {
+  	maven { url "$System.env.MVN_REPO" }
+}
+  	
+dependencies {
+    //compile 'commons-collections:commons-collections:3.2'
+    compile 'org.mongodb:mongo-java-driver:2.10.1'
+    compile 'org.jongo:jongo:1.2'
+
+    compile 'org.mongojack:mongojack:2.6.0'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.7.1'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.7.1'
+
+    testCompile 'junit:junit:4.+'
+}
+
+test {
+    systemProperties 'db.url': 'mongodb://user:**********@ds017231.mlab.com:17231'
+    
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}
